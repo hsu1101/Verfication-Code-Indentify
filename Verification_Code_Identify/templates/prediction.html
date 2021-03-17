@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <link href="static/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <center>
+            <div class='cont'>
+                
+            
+      
+            {% if data[0]==data[1] %}
+            <h1> CORRECT</h1>
+            
+            {% else %}
+            <h1> WRONG</h1>
+                
+  	    {%endif%}
+
+            <h2> The model predict: {{data[0]}}.</h2>
+            <h2> The real  answer:{{data[1]}}. </h2>  
+  
+         
+
+        </div>
+
+            <img src="{{url_for('load_img')}}" alt='img'>
+            <a href="/" class='btn'>go back</a>
+
+        </center>
+        
+    </body>
+</html>
